@@ -1,5 +1,6 @@
 package view;
 
+import controller.BtnViseDetaljaController;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
@@ -75,14 +76,7 @@ public class Page1 extends Stage{
 			
 		
 		btnViseDetalja = new Button("Vise detalja...");
-			btnViseDetalja.setOnAction(new EventHandler<ActionEvent>() {
-
-				@Override
-				public void handle(ActionEvent event) {
-					if(Page1.getInstance().getTvFilmovi().getSelectionModel().getSelectedItem() != null) 
-					Page2.getInstance(Page1.getInstance(), Baza.getInstance()).show();
-				}
-			});
+			btnViseDetalja.setOnAction(new BtnViseDetaljaController());
 				
 		btnOceni = new Button("Oceni");
 			btnOceni.setOnAction(new EventHandler<ActionEvent>() {
