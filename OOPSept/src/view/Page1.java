@@ -216,9 +216,5 @@ public class Page1 extends Stage{
 	public TableView<Film> getTvFilmovi() {
 		return tvFilmovi;
 	}
-	
-	public void showThis() {
-		show();
-	}
  	
 }
